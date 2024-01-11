@@ -5,5 +5,5 @@
 
     "dockerComposeFile": "../docker-compose.yml",
     "service": "api",
-    "workspaceFolder": "/"
+    "workspaceFolder": "/workspace"
 }
