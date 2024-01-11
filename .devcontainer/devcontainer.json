@@ -3,7 +3,7 @@
 {
     "name": "fastAPI-sample",
 
-    "dockerComposeFile": "./docker-compose.yml",
+    "dockerComposeFile": "../docker-compose.yml",
     "service": "api",
     "workspaceFolder": "/"
 }
