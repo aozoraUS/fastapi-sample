@@ -5,10 +5,5 @@
 
   "dockerComposeFile": "./docker-compose.yml",
   "service": "api",
-  "workspaceFolder": "/workspace",
-
-  "features": {
-    "git": "os-provided",
-    "git-lfs": "latest"
-  }
+  "workspaceFolder": "/workspace"
 }
