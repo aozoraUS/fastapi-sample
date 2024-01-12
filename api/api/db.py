@@ -7,7 +7,7 @@ from fastapi import HTTPException
 
 username="root"
 password="password"
-database="assignment_web_db"
+database="web_db"
 host="db"
 
 db_url=f'mysql://{username}:{password}@{host}/{database}?charset=utf8mb4'
