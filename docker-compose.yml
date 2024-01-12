@@ -11,7 +11,9 @@ services:
         working_dir: /workspace
         tty: true
         depends_on:
-            - db
+            db:
+                condition: service_healthy
+        command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
     db:
         image: mysql
@@ -25,6 +27,8 @@ services:
             - TZ=Asia/Tokyo
         volumes:
             - ./db/mysql/:/var/lib/mysql
+        healthcheck:
+            test: mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD
 
     phpmyadmin:
         container_name: phpmyadmin_container
